@@ -1,0 +1,21 @@
+{% extends "maestra.html" %}
+{% block titulo %}
+Inicio de Sesión
+{% endblock %}
+{% block contenido %}
+<section class="section">
+    <div class="columns">
+        <div class="column is-one-third">
+            <h3 class="is-size-3">Agregar disco</h3>
+            <form action="{{url_for('procesar_login')}}" method="post">
+                <label for="codigo">Nombre de Usuario:</label>
+                <input required type="text" class="input" placeholder="Username" name="username" id="username">
+                <label for="nombre">Contraseña:</label>
+                <input required type="password" class="input" placeholder="Contraseña" name="password" id="password">
+                <button type="submit" class="button is-success mt-2">Iniciar Sesión</button>
+                <a href="{{url_for('signup')}}" class="button is-primary mt-2">Registrar Usuario</a>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
